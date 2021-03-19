@@ -2,11 +2,11 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.core.paginator import Paginator
-from django.utils.six import add_metaclass, iteritems
 from elasticsearch.helpers import bulk
 from elasticsearch_dsl import DocType as DSLDocType
 from elasticsearch_dsl.document import DocTypeMeta as DSLDocTypeMeta
 from elasticsearch_dsl.field import Field
+from six import add_metaclass, iteritems
 
 from .apps import DEDConfig
 from .exceptions import ModelFieldNotMappedError, RedeclaredFieldError
